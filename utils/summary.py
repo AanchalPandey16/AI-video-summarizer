@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 
 def get_next_summary_filename():
@@ -71,3 +71,4 @@ Do not add explanations, commentary, or extra notes.
         f.write(summary)
 
     return summary
+
